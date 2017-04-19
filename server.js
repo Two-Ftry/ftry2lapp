@@ -4,6 +4,7 @@ const express = require('express')
 const favicon = require('serve-favicon')
 const compression = require('compression')
 const resolve = file => path.resolve(__dirname, file)
+const config = require('./config/config');
 
 const isProd = process.env.NODE_ENV === 'production'
 const serverInfo =
@@ -79,7 +80,7 @@ app.get('*', (req, res) => {
     .pipe(res)
 })
 
-const port = process.env.PORT || 8080
+const port = config.port || process.env.PORT ;
 app.listen(port, () => {
   console.log(`server started at localhost:${port}`)
 })
