@@ -10,7 +10,7 @@
         <router-link to="/show">Show</router-link>
         <router-link to="/ask">Ask</router-link>
         <router-link to="/job">Jobs</router-link>
-        <router-link to="/erpList">erpList</router-link>
+        <router-link to="/erp">erpList</router-link>
         <a class="github" href="https://github.com/vuejs/vue-hackernews-2.0" target="_blank">
           Built with Vue.js
         </a>

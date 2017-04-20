@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { fetchItems, fetchIdsByType, fetchUser } from './api'
+import { fetchItems, fetchIdsByType, fetchUser } from './api';
+
+import erpVuex from '../modules/erp/vuex/';
 
 Vue.use(Vuex)
 
@@ -105,6 +107,9 @@ const store = new Vuex.Store({
     activeItems (state, getters) {
       return getters.activeIds.map(id => state.items[id]).filter(_ => _)
     }
+  },
+  modules: {
+    erp: erpVuex
   }
 })
 

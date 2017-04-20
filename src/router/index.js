@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 const config = require('../../config/config');
+import erpRouter from '../modules/erp/router';
 
-Vue.use(Router)
+Vue.use(Router);
 
 // We are using Webpack code splitting here so that each route's associated
 // component code is loaded on-demand only when the route is visited.
@@ -33,7 +34,7 @@ export default new Router({
         { path: '/job/:page(\\d+)?', component: createListView('job') },
         { path: '/item/:id(\\d+)', component: ItemView },
         { path: '/user/:id', component: UserView },
-        { path: '/erpList', component: require('../views/ErpList.vue')},
-        { path: '/', redirect: '/top' }
+        erpRouter,
+        { path: '/', redirect: '/erp' }
     ]
 })

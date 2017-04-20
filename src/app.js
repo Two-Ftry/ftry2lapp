@@ -4,6 +4,7 @@ import store from './store'
 import router from './router'
 import { sync } from 'vuex-router-sync'
 import * as filters from './filters'
+//import 'babel-polyfill';
 
 // sync the router with the vuex store.
 // this registers `store.state.route`
